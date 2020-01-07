@@ -22,9 +22,8 @@
 </head>
 <body>
 <div class="container container-mobile-fluid" style="background-color: transparent;">
-    <!--Navbar -->
-    <!--off iaaaa-->
-    <!--skyLine?-->
+    {{--lorem--}}
+    {{--navbarbai--}}
     <div class="row header">
         <div class="col-sm-4">
             <div class="top-logo">
