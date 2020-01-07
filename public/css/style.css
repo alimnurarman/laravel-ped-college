@@ -1,0 +1,216 @@
+html{
+display: block;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.bor-r{
+    border-radius: 10px;
+}
+/*header-here*/
+.top-logo{
+    position: absolute;
+    top: 10px;
+    width: 77px;
+    height: 77px;
+    background-image: url('http://ped1.kazobr.kz/wp-content/uploads/2019/11/Slajd1-8.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*z-index: 1000;*/
+}
+.top-name-bold{
+    font-size: 14px;
+    margin-left: 88px;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.google-fonts-1{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.reception{
+    font-size: 13px;
+}
+
+.navbar{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.main-card {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.social-n {
+    list-style: none;
+}
+
+.social-n li {
+    display: inline-block;
+}
+
+.fa-instagram {
+    color: #fff;
+}
+
+.fa-instagram:hover {
+    color: red;
+}
+
+.fa-facebook-f {
+    color: #fff;
+}
+
+.fa-facebook-f:hover {
+    color: #3E5790;
+}
+
+.fa-vk {
+    color: #fff;
+}
+
+.fa-vk:hover {
+    color: #4F7DB3;
+}
+
+/*.lang:active{
+    color: #000;
+}*/
+/*hover-menu*/
+.body-wrap:after {
+    top: auto;
+    bottom: 0;
+
+    background: linear-gradient(to bottom, rgba(26, 49, 95, 0) 0%, rgba(26, 49, 95, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001a315f', endColorstr='#1a315f', GradientType=0);
+}
+nav {
+    margin-top: 60px;
+    box-shadow: 5px 4px 5px #000;
+}
+/*left-sidebar*/
+.ls{
+    color: #000;
+    font-size: 13px;
+}
+.ls:hover{
+    color: red;
+}
+/*main-content*/
+.news-title{
+    color: #00488B;
+    font-size: 16px;
+    font-weight: bold;
+}
+.news-title:hover{
+    color: red;
+}
+.date-and-view{
+    color: #96A1A8;
+    font-size: 11px;
+}
+.archive-news-text{
+    font-size: 14px;
+    color: #101b20;
+    line-height: 19px;
+}
+/*right-sidebar*/
+.rs{
+    border-radius: 10px;
+}
+.rs-img{
+    border-radius: 10px;
+    width: 235px;
+    height: auto;
+}
+/*main-content*/
+.archive-news{
+    font-size: 18px;
+    color: #E62C0E;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.archive-news a{
+    color: #798186;
+    font-size: 13px;
+    float: right;
+    font-weight: 400;
+    text-transform: none;
+    display: inline-block;
+}
+/*google-maps*/
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+/*all-cards*/
+.links-footer{
+    list-style: none;
+    padding-left: 25px;
+}
+.links-li{
+    margin-top: 7px;
+}
+.links{
+    color: #000;
+}
+.links:hover{
+    color: red;
+}
+
+
+.dropdown-item{
+    font-size: 12px;
+    color: #000;
+}
+
+.dropdown-item:hover {
+    color: red;
+}
+
+/*
+carosel-here*/
+
+.container-mobile-fluid {
+    width: 100%;
+}
+
+.col {
+    width: 10%;
+}
+
+/*nurlan's carousel*/
+.col-md-3 {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.col-md-3 img {
+    width: 100%;
+    height: auto;
+}
+
+body .carousel-indicators li {
+    background-color: red;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon {
+    background-color: red;
+}
+
+body .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
