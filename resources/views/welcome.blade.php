@@ -25,8 +25,6 @@
 background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,203,255,1) 100%); background-repeat: no-repeat; background-size: cover; height: 100vh;">
 <div class="container container-mobile-fluid" style="background-color: transparent;">
     <!--Navbar -->
-    <!--off iaaaa-->
-    <!--skyLine or gt-r->
     <div class="row header">
         <div class="col-sm-4">
             <div class="top-logo">
