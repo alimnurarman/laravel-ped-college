@@ -11,7 +11,9 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
     <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}">
+
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!--Google-fonts-->
@@ -23,8 +25,11 @@
 <body>
 <div class="container container-mobile-fluid" style="background-color: transparent;">
     {{--lorem--}}
+
     {{--navbarbai--}}
     {{--<a href="#">world hello</a>--}}
+    <!--Navbar -->
+
     <div class="row header">
         <div class="col-sm-4">
             <div class="top-logo">
