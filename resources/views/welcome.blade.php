@@ -24,6 +24,7 @@
 </head>
 <body>
 <div class="container container-mobile-fluid" style="background-color: transparent;">
+    {{--lorem--}}
     <!--Navbar -->
     <div class="row header">
         <div class="col-sm-4">
