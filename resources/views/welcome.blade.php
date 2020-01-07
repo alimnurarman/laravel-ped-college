@@ -25,7 +25,11 @@
 <body>
 <div class="container container-mobile-fluid" style="background-color: transparent;">
     {{--lorem--}}
+
+    {{--navbarbai--}}
+    {{--<a href="#">world hello</a>--}}
     <!--Navbar -->
+
     <div class="row header">
         <div class="col-sm-4">
             <div class="top-logo">
