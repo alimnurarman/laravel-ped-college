@@ -1,17 +1,18 @@
 <div class="right-sidebar text-center mt-2">
-    <a href="#">
+    <a href="{{ url('president/message') }}">
         <div class="m-2 rs z-depth-1">
             <img class="img-fluid rs-img"
                  src="http://ped-kollege.kz/templates/college/static/images/b1.png" alt="">
         </div>
     </a>
-    <a href="#">
+    <!--lorem-->
+    <a href="{{ url('spiritual_revivals') }}">
         <div class="m-2 rs z-depth-1">
             <img class="img-fluid rs-img"
                  src="http://ped-kollege.kz/templates/college/static/images/b2.png" alt="">
         </div>
     </a>
-    <a href="#">
+    <a href="https://strategy2050.kz/">{{--Link needed check!!!!!!!--}}
         <div class="m-2 rs z-depth-1">
             <img class="img-fluid rs-img"
                  src="http://ped-kollege.kz/templates/college/static/images/b3.png" alt="">

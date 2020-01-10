@@ -2,7 +2,7 @@ html {
     display: block;
 }
 
-body {
+#welcome {
     font-family: 'Open Sans', sans-serif;
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 203, 255, 1) 100%);
@@ -10,7 +10,6 @@ body {
     background-size: cover;
     height: 100vh;
 }
-
 .bor-r {
     border-radius: 10px;
 }
@@ -46,11 +45,11 @@ body {
 }
 
 .navbar {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0 0;
 }
 
 .main-card {
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 .social-n {
@@ -60,31 +59,6 @@ body {
 .social-n li {
     display: inline-block;
 }
-
-.fa-instagram {
-    color: #fff;
-}
-
-.fa-instagram:hover {
-    color: red;
-}
-
-.fa-facebook-f {
-    color: #fff;
-}
-
-.fa-facebook-f:hover {
-    color: #3E5790;
-}
-
-.fa-vk {
-    color: #fff;
-}
-
-.fa-vk:hover {
-    color: #4F7DB3;
-}
-
 /*.lang:active{
     color: #000;
 }*/
@@ -104,12 +78,12 @@ nav {
 
 /*left-sidebar*/
 .ls {
-    color: #000;
-    font-size: 13px;
+    color: #000000;
+    font-size: 14px;
 }
 
 .ls:hover {
-    color: red;
+    color: #ff0011;
 }
 
 /*main-content*/
@@ -240,4 +214,18 @@ body .carousel-control-next-icon {
 body .no-padding {
     padding-left: 0;
     padding-right: 0;
+}
+
+/*nurlan-css*/
+.my-title {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+}
+.social-li{
+    list-style: none;
+    display: inline-block;
+}
+.president-text {
+    font-size: 14px;
 }

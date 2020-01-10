@@ -1,4 +1,4 @@
-<div class="card partners-carousel bor-r">
+<div class="card partners-carousel mt-4 bor-r">
     <div class="card-body">
         <div id="demo" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
