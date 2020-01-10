@@ -1,30 +1,13 @@
-<!DOCTYPE html>
+{{--<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content='width=1170'/>
-    <title>AЛМАТЫ ҚАЗАҚ МЕМЛЕКЕТТІК ГУМАНИТАРЛЫҚ - ПЕДАГОГТІК КОЛЛЕДЖ</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="{{asset('img/kz-logo.ico')}}" type="image/x-icon">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('https://use.fontawesome.com/releases/v5.11.2/css/all.css')}}">
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}">
-    <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <!--Google-fonts-->
-    <link href="{{asset('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')}}" rel="stylesheet"/>
-    <link href="{{asset('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900')}}" rel="stylesheet"/>
-    <!--<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">-->
+    @include('layouts.head')
 </head>
-<body>
+<body id="welcome">
 <div class="container container-mobile-fluid" style="background-color: transparent;">
-    {{--lorem--}}
-    {{--navbarbai--}}
-    {{--<a href="#">world hello</a>--}}
+    --}}{{--lorem--}}{{--
+    --}}{{--navbarbai--}}{{--
+    --}}{{--<a href="#">world hello</a>--}}{{--
     <div class="row header">
         <div class="col-sm-4">
             <div class="top-logo">
@@ -633,20 +616,7 @@
     </div>
 </div>
 <!--End your project her-->
-
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="js/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="js/mdb.min.js"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>-->
+@include('layouts.scripts')
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript">
     /*new Vue({
@@ -666,4 +636,4 @@
 </script>
 
 </body>
-</html>
+</html>--}}
