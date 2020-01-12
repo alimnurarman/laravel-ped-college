@@ -10,6 +10,7 @@ html {
     background-size: cover;
     height: 100vh;
 }
+
 .bor-r {
     border-radius: 10px;
 }
@@ -59,6 +60,7 @@ html {
 .social-n li {
     display: inline-block;
 }
+
 /*.lang:active{
     color: #000;
 }*/
@@ -83,7 +85,7 @@ nav {
 }
 
 .ls:hover {
-    color: #ff0011;
+    color: #FF0000;
 }
 
 /*main-content*/
@@ -94,7 +96,7 @@ nav {
 }
 
 .news-title:hover {
-    color: red;
+    color: #FF0000;
 }
 
 .date-and-view {
@@ -122,7 +124,7 @@ nav {
 /*main-content*/
 .archive-news {
     font-size: 18px;
-    color: #E62C0E;
+    color: #FF0000;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -167,7 +169,7 @@ nav {
 }
 
 .links:hover {
-    color: red;
+    color: #FF0000;
 }
 
 
@@ -177,7 +179,7 @@ nav {
 }
 
 .dropdown-item:hover {
-    color: red;
+    color: #FF0000;
 }
 
 /*
@@ -203,12 +205,12 @@ carosel-here*/
 }
 
 body .carousel-indicators li {
-    background-color: red;
+    background-color: #ff0000;
 }
 
 body .carousel-control-prev-icon,
 body .carousel-control-next-icon {
-    background-color: red;
+    background-color: #ff0000;
 }
 
 body .no-padding {
@@ -222,37 +224,61 @@ body .no-padding {
     line-height: 19px;
     text-align: center;
 }
-.social-li{
+
+.social-li {
     list-style: none;
     display: inline-block;
 }
+
 .president-text {
     font-size: 14px;
 }
-.news-list{
+
+.news-list {
     list-style: none;
     padding-left: 0;
 }
+
 /*footer-social*/
-.insta{
+.insta {
     border-radius: 100%;
     background: #d6249f;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
-.insta a{
+
+.insta a {
     color: #fff;
 }
-.face{
+
+.face {
     border-radius: 100%;
     background: #3b5998;
 }
-.face a{
+
+.face a {
     color: #fff;
 }
-.vk{
+
+.vk {
     border-radius: 100%;
     background: #4c75a3;
 }
-.vk a{
+
+.vk a {
     color: #fff;
+}
+
+/*Multi-language*/
+.lang {
+    list-style: none;
+}
+
+.lang li {
+    display: inline-block;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.lang li:active {
+    color: #FF0000;
 }
