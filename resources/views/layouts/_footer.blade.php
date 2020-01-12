@@ -39,18 +39,24 @@
         </div>
         <div class="col-sm-3 mt-3">
             <div>
-                <a class="links font-weight-bold" href="#"><i class="fas fa-home"></i> Басты</a>
+                <a class="links font-weight-bold" href="{{ url('/') }}"><i class="fas fa-home"></i> Басты</a>
                 <div class="mt-3">
                     <ul class="links-footer">
-                        <li class="links-li"><a class="links" href="#">ҚР Президентінің Жолдауы</a></li>
-                        <li class="links-li"><a class="links" href="#">Мемлекеттік рәміздер</a></li>
+                        <li class="links-li"><a class="links" href="{{ url('president/message') }}">ҚР Президентінің Жолдауы</a></li>
+                        <li class="links-li"><a class="links" href="{{ url('spiritual_revivals') }}">Мемлекеттік рәміздер</a></li>
                         <li class="links-li"><a class="links" href="#">Ғаламторлық қабылдау</a></li>
-                        <li class="links-li"><a class="links" href="#">Жаңалықтар</a></li>
+                        <li class="links-li"><a class="links" href="{{ url('/') }}">Жаңалықтар</a></li>
                         <li class="links-li"><a class="links" href="#">Колледж туралы</a></li>
-                        <li class="links-li"><a class="links" href="#">Сайт картасы</a></li>
-                        <li class="links-li"><a class="links" href="#">RSS</a></li>
+                        {{--<li class="links-li"><a class="links" href="#">Сайт картасы</a></li>--}}
+                        {{--<li class="links-li"><a class="links" href="#">RSS</a></li>--}}
                     </ul>
                     <hr class="ml-4 mr-4"/>
+                    <ul class="social-n"> {{--Ссылканы li-дің сыртына қою керек сияқты крч пересмотреть--}}
+                        <li class="p-1 mr-2 insta"><a class="m-2" href="https://www.instagram.com/pedkoledzh1/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li class="p-1 mr-2 face"><a class="m-2" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="p-1 mr-2 vk"><a class="m-2" href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                    </ul>
                 </div>
 
             </div>
