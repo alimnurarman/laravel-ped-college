@@ -1,4 +1,4 @@
-<div class="right-sidebar text-center mt-2">
+<div class="right-sidebar text-center mt-3">
     <a href="{{ url('president/message') }}">
         <div class="m-2 rs z-depth-1">
             <img class="img-fluid rs-img"
@@ -12,7 +12,7 @@
                  src="http://ped-kollege.kz/templates/college/static/images/b2.png" alt="">
         </div>
     </a>
-    <a href="https://strategy2050.kz/">{{--Link needed check!!!!!!!--}}
+    <a href="{{ url('https://strategy2050.kz/') }}">{{--Link needed check!!!!!!!--}}
         <div class="m-2 rs z-depth-1">
             <img class="img-fluid rs-img"
                  src="http://ped-kollege.kz/templates/college/static/images/b3.png" alt="">
