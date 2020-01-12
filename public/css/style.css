@@ -229,3 +229,30 @@ body .no-padding {
 .president-text {
     font-size: 14px;
 }
+.news-list{
+    list-style: none;
+    padding-left: 0;
+}
+/*footer-social*/
+.insta{
+    border-radius: 100%;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.insta a{
+    color: #fff;
+}
+.face{
+    border-radius: 100%;
+    background: #3b5998;
+}
+.face a{
+    color: #fff;
+}
+.vk{
+    border-radius: 100%;
+    background: #4c75a3;
+}
+.vk a{
+    color: #fff;
+}
