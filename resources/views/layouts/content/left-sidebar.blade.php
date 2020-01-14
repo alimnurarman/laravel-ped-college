@@ -67,13 +67,13 @@
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/state_services') }}">
                 Мемлекеттік қызметтер
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/regulatory_legal_acts') }}">
                 Нормативті құқықтық актілер
             </a>
 
