@@ -15,7 +15,7 @@
                     @include('layouts.content.left-sidebar')
                 </div>
                 <div class="col-sm-6">
-                    @include('layouts.sidebar2.spiritualrevival.content')
+                    @include('layouts.content.header-content.content')
                 </div>
                 <div class="col-sm-3">
                     @include('layouts.content.right-sidebar')

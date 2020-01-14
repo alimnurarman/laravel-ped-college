@@ -16,17 +16,16 @@
         </div>
     </div>
     <div class="col-sm-2 text-center mt-4">
-        <a href="#">
+        <a href="{{ url('president/message') }}" target="_blank">
             <img src="http://ped-kollege.kz/templates/college/static/images/modern_kz.png" alt=""
                  style="width: 140px; height: 80px;"/>
         </a>
     </div>
     <div class="col-sm-3 text-center">
-        <ul class="social-n mt-5">
-            <li class=""><a class="mr-3" href="https://www.instagram.com/pedkoledzh1/" target="_blank"><i
-                        class="fab fa-instagram"></i></a></li>
-            <li class=""><a class="mr-3" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-            <li class=""><a class="mr-3" href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+        <ul class="lang mt-5">
+            <li class="lang-li mr-4 active"><a href="javascript:cms.lang.Set('kz');" class="act">Қаз</a></li>
+            <li class="lang-li mr-4"><a href="javascript:cms.lang.Set('ru');">Рус</a></li>
+            <li class="lang-li mr-4"><a href="javascript:cms.lang.Set('en');">Eng</a></li>
         </ul>
     </div>
 </div>
@@ -39,30 +38,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav nav font-weight-bold mr-auto">
             <li class="nav-item mr-4">
-                <a class="nav-link" href="#">БАСТЫ
+                <a class="nav-link" href="{{ url('/') }}">БАСТЫ
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <!--<li class="nav-item">
-                <a class="nav-link" href="#">ҚР президентінің жолдауы</a>
-            </li>
-            <li class="nav-item dropdown" data-animations="fadeInDown fadeInRight fadeInUp fadeInLeft">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">Мемлекеттік рәмаіздер</a>
-                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">мемлекеттік рәміздер туралы</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>-->
             <li class="nav-item mr-4">
-                <a class="nav-link" href="#">ЖАҢАЛЫҚТАР</a>
+                <a class="nav-link" href="{{ url('/') }}">ЖАҢАЛЫҚТАР</a>
             </li>
             <li class="nav-item mr-4">
-                <a class="nav-link" href="#">ТАЛАПКЕРГЕ</a>
+                <a class="nav-link" href="{{ url('/specialities') }}">ТАЛАПКЕРГЕ</a>
             </li>
             <li class="nav-item mr-4">
-                <a class="nav-link" href="#">ГАЛЕРЕЯ</a>
+                <a class="nav-link" href="{{ url('/gallery') }}">ГАЛЕРЕЯ</a>
             </li>
             <li class="nav-item mr-4">
                 <a class="nav-link" href="#">БАЙЛАНЫСТАР</a>

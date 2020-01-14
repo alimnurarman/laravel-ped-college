@@ -1,49 +1,55 @@
 <div class="left-sidebar">
-    <ul class="nav ml-4 mt-3">
+    <ul class="nav ml-2 mt-3">
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/director_h') }}">
                 Директордың сәлемдесуі
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/category/gos') }}">
+                Мемлекеттік рәміздер
+            </a>
+            <hr style="width: 100%;"/>
+        </li>
+        <li class="w-100">
+            <a class="ls" href="{{ url('/sample') }}">
                 Үлгі
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/college_history') }}">
                 Колледж тарихы
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/administration') }}">
                 Әкімшілік
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/international_cooperation') }}">
                 Халықаралық әріптестік
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/teachers') }}">
                 Оқытушылар
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/our_achievements') }}">
                 Біздің жетістіктеріміз
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/call_schedule') }}">
                 Қоңырау кестесі
             </a>
             <hr style="width: 100%;"/>
@@ -70,15 +76,10 @@
             <a class="ls" href="#">
                 Нормативті құқықтық актілер
             </a>
-            <hr style="width: 100%;"/>
-        </li>
-        <li class="w-100">
-            <a class="ls" href="#">
-                Мемлекеттік рәміздер
-            </a>
+
         </li>
     </ul>
-    <div class="w-100 mt-4 p-4 font-weight-bold" style="background-color: #1676CD; color: #fff;">
+    {{--<div class="w-100 mt-4 p-4 font-weight-bold" style="background-color: #1676CD; color: #fff;">
         Сайттың аналитикасы
     </div>
     <div class="p-4">
@@ -93,7 +94,7 @@
     </div>
     <div class="w-100 p-4 font-weight-bold" style="background-color: #1676CD; color: #fff;">
         Жаңалықтар мұрағаты
-    </div>
+    </div>--}}
     <!--<div class="m-2" id="app">
         <v-app id="inspire">
             <v-row justify="center">

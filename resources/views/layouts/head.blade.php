@@ -4,6 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <!-- MDB icon -->
 <link rel="icon" href="{{asset('img/kz-logo.ico')}}" type="image/x-icon">
+{{--<link rel="shortcut icon" href="{{asset('img/brow.ico')}}" type="image/x-icon">--}}
 <!-- Font Awesome -->
 <link rel="stylesheet" href="{{asset('https://use.fontawesome.com/releases/v5.11.2/css/all.css')}}">
 <!-- Bootstrap core CSS -->
