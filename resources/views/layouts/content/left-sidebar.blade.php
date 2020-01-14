@@ -1,13 +1,13 @@
 <div class="left-sidebar">
     <ul class="nav ml-2 mt-3">
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/director_h') }}">
                 Директордың сәлемдесуі
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/category/gos') }}">
                 Мемлекеттік рәміздер
             </a>
             <hr style="width: 100%;"/>
@@ -19,13 +19,13 @@
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/college_history') }}">
                 Колледж тарихы
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/administration') }}">
                 Әкімшілік
             </a>
             <hr style="width: 100%;"/>

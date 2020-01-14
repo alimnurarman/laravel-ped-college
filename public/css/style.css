@@ -238,7 +238,10 @@ body .no-padding {
     list-style: none;
     padding-left: 0;
 }
-
+.flag-img{
+    width: 416px;
+    height: 219px;
+}
 /*footer-social*/
 .insta {
     border-radius: 100%;
