@@ -29,6 +29,8 @@ Route::get('/sample','PagesController@sample');
 Route::get('/international_cooperation','PagesController@international_cooperation');
 Route::get('/teachers','PagesController@teachers');
 Route::get('/our_achievements','PagesController@our_achievements');
+Route::get('/edu_work','PagesController@edu_work');
+Route::get('/public_procurement','PagesController@public_procurement');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
