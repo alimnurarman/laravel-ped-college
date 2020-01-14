@@ -46,4 +46,19 @@ class PagesController extends Controller
     public function director_h(){
         return view('layouts\sidebar1\director_h');
     }
+    public function call_schedule(){
+        return view('layouts\sidebar1\call_schedule');
+    }
+    public function sample(){
+        return view('layouts\sidebar1\sample');
+    }
+    public function international_cooperation(){
+        return view('layouts\sidebar1\international_cooperation');
+    }
+    public function teachers(){
+        return view('layouts\sidebar1\teachers');
+    }
+    public function our_achievements(){
+        return view('layouts\sidebar1\our_achievements');
+    }
 }

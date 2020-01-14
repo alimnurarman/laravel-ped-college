@@ -24,6 +24,11 @@ Route::get('/gallery','PagesController@gallery');
 Route::get('/college_history','PagesController@college_history');
 Route::get('/administration','PagesController@administration');
 Route::get('/director_h','PagesController@director_h');
+Route::get('/call_schedule','PagesController@call_schedule');
+Route::get('/sample','PagesController@sample');
+Route::get('/international_cooperation','PagesController@international_cooperation');
+Route::get('/teachers','PagesController@teachers');
+Route::get('/our_achievements','PagesController@our_achievements');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

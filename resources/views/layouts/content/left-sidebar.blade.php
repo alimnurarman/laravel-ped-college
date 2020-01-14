@@ -13,7 +13,7 @@
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/sample') }}">
                 Үлгі
             </a>
             <hr style="width: 100%;"/>
@@ -31,25 +31,25 @@
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/international_cooperation') }}">
                 Халықаралық әріптестік
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/teachers') }}">
                 Оқытушылар
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/our_achievements') }}">
                 Біздің жетістіктеріміз
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/call_schedule') }}">
                 Қоңырау кестесі
             </a>
             <hr style="width: 100%;"/>

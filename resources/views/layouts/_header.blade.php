@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="col-sm-2 text-center mt-4">
-        <a href="#">
+        <a href="{{ url('president/message') }}" target="_blank">
             <img src="http://ped-kollege.kz/templates/college/static/images/modern_kz.png" alt=""
                  style="width: 140px; height: 80px;"/>
         </a>
@@ -43,13 +43,13 @@
                 </a>
             </li>
             <li class="nav-item mr-4">
-                <a class="nav-link" href="#">ЖАҢАЛЫҚТАР</a>
+                <a class="nav-link" href="{{ url('/') }}">ЖАҢАЛЫҚТАР</a>
             </li>
             <li class="nav-item mr-4">
-                <a class="nav-link" href="#">ТАЛАПКЕРГЕ</a>
+                <a class="nav-link" href="{{ url('/specialities') }}">ТАЛАПКЕРГЕ</a>
             </li>
             <li class="nav-item mr-4">
-                <a class="nav-link" href="#">ГАЛЕРЕЯ</a>
+                <a class="nav-link" href="{{ url('/gallery') }}">ГАЛЕРЕЯ</a>
             </li>
             <li class="nav-item mr-4">
                 <a class="nav-link" href="#">БАЙЛАНЫСТАР</a>
