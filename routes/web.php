@@ -31,6 +31,7 @@ Route::get('/teachers','PagesController@teachers');
 Route::get('/our_achievements','PagesController@our_achievements');
 Route::get('/edu_work','PagesController@edu_work');
 Route::get('/public_procurement','PagesController@public_procurement');
+Route::get('/regulatory_legal_acts','PagesController@regulatory_legal_acts');
+Route::get('/state_services','PagesController@state_services');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

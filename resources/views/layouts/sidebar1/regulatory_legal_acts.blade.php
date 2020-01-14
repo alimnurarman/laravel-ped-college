@@ -15,7 +15,7 @@
                     @include('layouts.content.left-sidebar')
                 </div>
                 <div class="col-sm-6">
-                    @include('layouts.sidebar1.administration_content')
+                    @include('layouts.sidebar1.regulatory_legal_acts_content')
                 </div>
                 <div class="col-sm-3">
                     @include('layouts.content.right-sidebar')

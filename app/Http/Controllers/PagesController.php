@@ -67,4 +67,10 @@ class PagesController extends Controller
     public function public_procurement(){
         return view('layouts\sidebar1\public_procurement');
     }
+    public function regulatory_legal_acts(){
+        return view('layouts\sidebar1\regulatory_legal_acts');
+    }
+    public function state_services(){
+        return view('layouts\sidebar1\state_services');
+    }
 }
