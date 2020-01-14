@@ -55,13 +55,13 @@
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/public_procurement') }}">
                 Оқу тәрбие жұмысы
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="#">
+            <a class="ls" href="{{ url('/public_procurement') }}">
                 Мемлекеттік сатып алу
             </a>
             <hr style="width: 100%;"/>

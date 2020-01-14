@@ -61,4 +61,10 @@ class PagesController extends Controller
     public function our_achievements(){
         return view('layouts\sidebar1\our_achievements');
     }
+    public function edu_work(){
+        return view('layouts\sidebar1\edu_work');
+    }
+    public function public_procurement(){
+        return view('layouts\sidebar1\public_procurement');
+    }
 }
