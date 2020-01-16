@@ -6,6 +6,25 @@
     <hr style="border: 1px solid #ebebeb;"/> <!--#a1c4fd-->
 
     <div class="row">
+        @foreach($posts as $post)
+            <div class="col-lg-12 col-xl-12 mb-2">
+                <a class="news-title" href="#">
+                    {{$post->title}}
+                </a>
+                <dt class="date-and-view">
+                    {{$post->time}}
+                    <i class="fas fa-eye pl-4"> 14</i>
+                </dt>
+                <a class="date-and-view">
+                    {{$post->photo_url}}
+                    <i class="fas fa-eye pl-4"> 14</i>
+                </a>
+                <a class="date-and-view">
+                    {{$post->description}}
+                    <i class="fas fa-eye pl-4"> 14</i>
+                </a>
+            </div>
+        @endforeach
         <div class="col-lg-12 col-xl-12 mb-2">
             <a class="news-title" href="#">
                 «The Best Mobile App – 2019»

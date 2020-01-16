@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@default');
+Route::resource('welcome', 'PagesController');
 Route::get('/basic', 'PagesController@basic');
 Route::get('/app', 'PagesController@app');
 Route::get('/dd-admin', 'PagesController@login');

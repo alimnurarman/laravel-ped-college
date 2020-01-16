@@ -1,639 +1,1581 @@
-{{--<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!doctype html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     @include('layouts.head')
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
-<body id="welcome">
-<div class="container container-mobile-fluid" style="background-color: transparent;">
-    --}}{{--lorem--}}{{--
-    --}}{{--navbarbai--}}{{--
-    --}}{{--<a href="#">world hello</a>--}}{{--
-    <div class="row header">
-        <div class="col-sm-4">
-            <div class="top-logo">
+<body>
+<div class="container-for-admin">
+    <!--Main Navigation-->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-admin fixed-top navbar-expand-lg navbar-light white mt-0">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+                    <strong class="blue-text">MDB</strong>
+                </a>
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/"
+                               target="_blank">About
+                                MDB</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect"
+                               href="https://mdbootstrap.com/docs/jquery/getting-started/download/"
+                               target="_blank">Free
+                                download</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/"
+                               target="_blank">Free
+                                tutorials</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect"
+                               target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/mdbootstrap/bootstrap-material-design"
+                               class="nav-link border border-light rounded waves-effect"
+                               target="_blank">
+                                <i class="fab fa-github mr-2"></i>MDB GitHub
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
             </div>
-            <b class="top-name-bold text-center mt-4">AЛМАТЫ ҚАЗАҚ МЕМЛЕКЕТТІК
-                <br/>
-                ГУМАНИТАРЛЫҚ - ПЕДАГОГТІК КОЛЛЕДЖ
-            </b>
-        </div>
-        <div class="col-sm-3 text-center">
-            <div class="mt-4">
-                Қабылдау бөлмесі
-                <br/>
-                <i>2-78-56-84, 2-90-87-44</i>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Sidebar -->
+        <div class="sidebar-fixed sf position-fixed">
+
+            <a class="logo-wrapper waves-effect">
+                <img src="https://mdbootstrap.com/img/logo/mdb-email.png" class="img-fluid" alt="">
+            </a>
+
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item active waves-effect">
+                    <i class="fa fa-pie-chart mr-3"></i>Dashboard
+                </a>
+                <a href="#" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fa fa-user mr-3"></i>Profile</a>
+                <a href="#" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fa fa-table mr-3"></i>Tables</a>
+                <a href="#" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fa fa-map mr-3"></i>Maps</a>
+                <a href="#" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fa fa-money mr-3"></i>Orders</a>
             </div>
+
         </div>
-        <div class="col-sm-2 text-center mt-4">
-            <a href="#">
-                <img src="http://ped-kollege.kz/templates/college/static/images/modern_kz.png" alt=""
-                     style="width: 140px; height: 80px;"/>
+        <!-- Sidebar -->
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main id="main" class="pt-5 mx-lg-5">
+        <div class="container-fluid mt-5">
+            <div class="row wow fadeIn">
+                <div class="col-md-9 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="h5 text-center"><strong>Dashboard</strong></h5>
+                            <div class="row">
+                                <form action="{{ route('welcome.store') }}" method="POST">
+                                    @method('POST')
+                                    @csrf
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <!-- Material outline input -->
+                                    <div class="md-form md-outline mb-2">
+                                        <input type="text" id="form1" class="form-control" name="title" >
+                                        <label for="form1">Title <i class="fas fa-question pl-2"
+                                                                    data-toggle="tooltip" data-placement="top"
+                                                                    title="Title"></i></label>
+                                    </div>
+                                    <div class="md-form md-outline mb-2">
+                                        <input type="text" id="form2" class="form-control" name="time" >
+                                        <label for="form2">Date & time for news <i class="fas fa-question pl-2"
+                                                                                   data-toggle="tooltip"
+                                                                                   data-placement="top"
+                                                                                   title="Date & time for news"></i></label>
+                                    </div>
+                                    <div class="md-form md-outline mb-4  w-50">
+                                        <input type="file" class="form-control" name="url" >
+                                    </div>
+                                    <div class="" id="editor" style="height: 200px;">
+                                        <p>Hello World!</p>
+                                        <p>Some initial <strong>bold</strong> text</p>
+                                        <p><br></p>
+                                    </div>
+                                    <div class="submit">
+                                        <button type="submit" class="btn btn-outline-black bor-r">Submit</button>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-3 mb-4">
+
+                    <!--Card-->
+                    <div class="card mb-4">
+
+                        <!-- Card header -->
+                        <div class="card-header text-center">
+                            Pie chart
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <canvas id="pieChart"></canvas>
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                    <!--Card-->
+                    <div class="card mb-4">
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!-- List group links -->
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item list-group-item-action waves-effect">Sales
+                                    <span class="badge badge-success badge-pill pull-right">22%
+                    <i class="fa fa-arrow-up ml-1"></i>
+                  </span>
+                                </a>
+                                <a class="list-group-item list-group-item-action waves-effect">Traffic
+                                    <span class="badge badge-danger badge-pill pull-right">5%
+                    <i class="fa fa-arrow-down ml-1"></i>
+                  </span>
+                                </a>
+                                <a class="list-group-item list-group-item-action waves-effect">Orders
+                                    <span class="badge badge-primary badge-pill pull-right">14</span>
+                                </a>
+                                <a class="list-group-item list-group-item-action waves-effect">Issues
+                                    <span class="badge badge-primary badge-pill pull-right">123</span>
+                                </a>
+                                <a class="list-group-item list-group-item-action waves-effect">Messages
+                                    <span class="badge badge-primary badge-pill pull-right">8</span>
+                                </a>
+                            </div>
+                            <!-- List group links -->
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!-- Table  -->
+                            <table class="table table-hover">
+                                <!-- Table head -->
+                                <thead class="blue-grey lighten-4">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Lorem</th>
+                                    <th>Ipsum</th>
+                                    <th>Dolor</th>
+                                </tr>
+                                </thead>
+                                <!-- Table head -->
+
+                                <!-- Table body -->
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 3</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Cell 4</td>
+                                    <td>Cell 5</td>
+                                    <td>Cell 6</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Cell 7</td>
+                                    <td>Cell 8</td>
+                                    <td>Cell 9</td>
+                                </tr>
+                                </tbody>
+                                <!-- Table body -->
+                            </table>
+                            <!-- Table  -->
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!-- Table  -->
+                            <table class="table table-hover">
+                                <!-- Table head -->
+                                <thead class="blue lighten-4">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Lorem</th>
+                                    <th>Ipsum</th>
+                                    <th>Dolor</th>
+                                </tr>
+                                </thead>
+                                <!-- Table head -->
+
+                                <!-- Table body -->
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 3</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Cell 4</td>
+                                    <td>Cell 5</td>
+                                    <td>Cell 6</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Cell 7</td>
+                                    <td>Cell 8</td>
+                                    <td>Cell 9</td>
+                                </tr>
+                                </tbody>
+                                <!-- Table body -->
+                            </table>
+                            <!-- Table  -->
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-6 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-header">Line chart</div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <canvas id="lineChart"></canvas>
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-6 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-header">Radar Chart</div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <canvas id="radarChart"></canvas>
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-6 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-header">Doughnut Chart</div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <canvas id="doughnutChart"></canvas>
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-6 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-header">Horizontal Bar Chart</div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <canvas id="horizontalBar"></canvas>
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-header">Google map</div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Google map-->
+                            <div id="map-container" class="map-container" style="height: 500px">
+                                <iframe
+                                    src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0"
+                                    style="border:0" allowfullscreen></iframe>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Section: Modals-->
+                        <section>
+
+                            <!-- Frame Modal Top Info-->
+                            <div class="modal fade top" id="frameModalTopInfoDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="row d-flex justify-content-center align-items-center">
+
+                                                <p class="pt-3 pr-2">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit. Impedit nisi quo
+                                                    provident fugiat reprehenderit nostrum quos..</p>
+
+                                                <a role="button" class="btn btn-info">Get it now
+                                                    <i class="fa fa-diamond ml-1"></i>
+                                                </a>
+                                                <a role="button" class="btn btn-outline-info waves-effect"
+                                                   data-dismiss="modal">No,
+                                                    thanks</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Frame Modal Bottom Success-->
+
+                            <!-- Frame Modal Bottom Success-->
+                            <div class="modal fade bottom" id="frameModalBottomSuccessDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-frame modal-bottom modal-notify modal-success"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="row d-flex justify-content-center align-items-center">
+
+                                                <p class="pt-3 pr-2">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit. Impedit nisi quo
+                                                    provident fugiat reprehenderit nostrum quos..</p>
+
+                                                <a role="button" class="btn btn-success">Get it now
+                                                    <i class="fa fa-diamond ml-1"></i>
+                                                </a>
+                                                <a role="button" class="btn btn-outline-success waves-effect"
+                                                   data-dismiss="modal">No, thanks</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Frame Modal Bottom Success-->
+
+                            <!-- Side Modal Top Right Success-->
+                            <div class="modal fade right" id="sideModalTRSuccessDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-side modal-top-right modal-notify modal-success"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading lead">Modal Success</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="text-center">
+                                                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+                                                    iusto nulla
+                                                    aperiam blanditiis ad consequatur in dolores culpa, dignissimos,
+                                                    eius
+                                                    non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer justify-content-center">
+                                            <a role="button" class="btn btn-success">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-success waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Side Modal Top Right Success-->
+
+                            <!-- Side Modal Top Left Info-->
+                            <div class="modal fade left" id="sideModalTLInfoDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-side modal-top-left modal-notify modal-info"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading lead">Modal Info</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+
+                                            <img
+                                                src="https://mdbootstrap.com/wp-content/uploads/2016/11/admin-dashboard-bootstrap.jpg"
+                                                alt="Material Design for Bootstrap - dashboard"
+                                                class="img-fluid">
+
+                                            <div class="text-center">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+                                                    vero illo
+                                                    error eveniet cum.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer justify-content-center">
+                                            <a role="button" class="btn btn-info">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-info waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Side Modal Top Left Info-->
+
+                            <!-- Side Modal Bottom Right Danger-->
+                            <div class="modal fade right" id="sideModalBRDangerDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-danger"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading">Modal Danger</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <p></p>
+                                                    <p class="text-center">
+                                                        <i class="fa fa-shopping-cart fa-4x"></i>
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-9">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga,
+                                                        molestiae
+                                                        provident temporibus sunt earum.</p>
+                                                    <h2>
+                                                        <span class="badge">v52gs1</span>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer justify-content-center">
+                                            <a role="button" class="btn btn-danger">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-danger waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Side Modal Bottom Right Danger-->
+
+                            <!-- Side Modal Bottom Left Warning-->
+                            <div class="modal fade left" id="sideModalBLWarningDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-side modal-bottom-left modal-notify modal-warning"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading">Modal Warning</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+
+                                            <div class="row">
+                                                <div class="col-3 text-center">
+                                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg"
+                                                         alt="Michal Szymanski - founder of Material Design for Bootstrap"
+                                                         class="img-fluid z-depth-1-half rounded-circle">
+                                                    <div style="height: 10px"></div>
+                                                    <p class="title mb-0">Jane</p>
+                                                    <p class="text-muted " style="font-size: 13px">Consultant</p>
+                                                </div>
+
+                                                <div class="col-9">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga,
+                                                        molestiae
+                                                        provident temporibus sunt earum.</p>
+                                                    <p class="card-text">
+                                                        <strong>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                            elit.</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer justify-content-center">
+                                            <a role="button" class="btn btn-warning">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-warning waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Side Modal Bottom Left Warning-->
+
+                            <!--Modal Form Login with Avatar Demo-->
+                            <div class="modal fade" id="modalLoginAvatarDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg"
+                                                 class="rounded-circle img-responsive"
+                                                 alt="Avatar photo">
+                                        </div>
+                                        <!--Body-->
+                                        <div class="modal-body text-center mb-1">
+
+                                            <h5 class="mt-1 mb-2">Maria Doe</h5>
+
+                                            <div class="md-form ml-0 mr-0">
+                                                <input type="password" type="text" id="form1" class="form-control ml-0">
+                                                <label for="form1" class="ml-0">Enter password</label>
+                                            </div>
+
+                                            <div class="text-center mt-4">
+                                                <button class="btn btn-cyan">Login
+                                                    <i class="fa fa-sign-in ml-1"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!--Modal Form Login with Avatar Demo-->
+
+                            <!--Modal: Login / Register Form Demo-->
+                            <div class="modal fade" id="modalLRFormDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                            </button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Modal: Login / Register Form Demo-->
+
+                            <!-- Central Modal Large Info-->
+                            <div class="modal fade" id="centralModalLGInfoDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading lead">Modal Info</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="text-center">
+                                                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+                                                    iusto nulla
+                                                    aperiam blanditiis ad consequatur in dolores culpa, dignissimos,
+                                                    eius
+                                                    non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+                                                </p>
+                                            </div>
+                                            <img
+                                                src="https://mdbootstrap.com/wp-content/uploads/2016/11/admin-dashboard-bootstrap.jpg"
+                                                alt="Material Design for Bootstrap - dashboard"
+                                                class="img-fluid">
+
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer">
+                                            <a role="button" class="btn btn-info">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-info waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Central Modal Large Info-->
+
+                            <!-- Central Modal Fluid Success-->
+                            <div class="modal fade" id="centralModalFluidSuccessDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-fluid modal-notify modal-success" role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading lead">Modal Success</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="text-center">
+                                                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+                                                    iusto nulla
+                                                    aperiam blanditiis ad consequatur in dolores culpa, dignissimos,
+                                                    eius
+                                                    non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+                                                </p>
+                                            </div>
+                                            <ul class="list-group z-depth-0">
+                                                <li class="list-group-item justify-content-between">
+                                                    Cras justo odio
+                                                    <span class="badge badge-primary badge-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Dapibus ac facilisis in
+                                                    <span class="badge badge-primary badge-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Morbi leo risus
+                                                    <span class="badge badge-primary badge-pill">1</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Cras justo odio
+                                                    <span class="badge badge-primary badge-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Dapibus ac facilisis in
+                                                    <span class="badge badge-primary badge-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Morbi leo risus
+                                                    <span class="badge badge-primary badge-pill">1</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer">
+                                            <a role="button" class="btn btn-success">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-success waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Central Modal Fluid Success-->
+
+                            <!-- Full Height Modal Right Success Demo-->
+                            <div class="modal fade right" id="fluidModalRightSuccessDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-full-height modal-right modal-notify modal-success"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading lead">Modal Success</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="text-center">
+                                                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+                                                    iusto nulla
+                                                    aperiam blanditiis ad consequatur in dolores culpa, dignissimos,
+                                                    eius
+                                                    non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+                                                </p>
+                                            </div>
+                                            <ul class="list-group z-depth-0">
+                                                <li class="list-group-item justify-content-between">
+                                                    Cras justo odio
+                                                    <span class="badge badge-primary badge-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Dapibus ac facilisis in
+                                                    <span class="badge badge-primary badge-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Morbi leo risus
+                                                    <span class="badge badge-primary badge-pill">1</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Cras justo odio
+                                                    <span class="badge badge-primary badge-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Dapibus ac facilisis in
+                                                    <span class="badge badge-primary badge-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Morbi leo risus
+                                                    <span class="badge badge-primary badge-pill">1</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer justify-content-center">
+                                            <a role="button" class="btn btn-success">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-success waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Full Height Modal Right Success Demo-->
+
+                            <!-- Full Height Modal Left Info Demo-->
+                            <div class="modal fade left" id="fluidModalLeftInfoDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-full-height modal-left modal-notify modal-info"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading lead">Modal Success</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="text-center">
+                                                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+                                                    iusto nulla
+                                                    aperiam blanditiis ad consequatur in dolores culpa, dignissimos,
+                                                    eius
+                                                    non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+                                                </p>
+                                            </div>
+                                            <ul class="list-group z-depth-0">
+                                                <li class="list-group-item justify-content-between">
+                                                    Cras justo odio
+                                                    <span class="badge badge-primary badge-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Dapibus ac facilisis in
+                                                    <span class="badge badge-primary badge-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Morbi leo risus
+                                                    <span class="badge badge-primary badge-pill">1</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Cras justo odio
+                                                    <span class="badge badge-primary badge-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Dapibus ac facilisis in
+                                                    <span class="badge badge-primary badge-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Morbi leo risus
+                                                    <span class="badge badge-primary badge-pill">1</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer justify-content-center">
+                                            <a role="button" class="btn btn-info">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-info waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Full Height Modal Right Info Demo-->
+
+                            <!-- Full Height Modal Top Warning Demo-->
+                            <div class="modal fade top" id="fluidModalTopWarningDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-full-height modal-top modal-notify modal-warning"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading lead">Modal Warning</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="text-center">
+                                                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                                            </div>
+                                            <ul class="list-group z-depth-0">
+                                                <li class="list-group-item justify-content-between">
+                                                    Cras justo odio
+                                                    <span class="badge badge-primary badge-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Dapibus ac facilisis in
+                                                    <span class="badge badge-primary badge-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Morbi leo risus
+                                                    <span class="badge badge-primary badge-pill">1</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer">
+                                            <a role="button" class="btn btn-warning">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-warning waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Full Height Modal Top Warning Demo-->
+
+                            <!-- Full Height Modal Bottom Danger Demo-->
+                            <div class="modal fade bottom" id="fluidModalBottomDangerDemo" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+                                <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger"
+                                     role="document">
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <!--Header-->
+                                        <div class="modal-header">
+                                            <p class="heading lead">Modal Danger</p>
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="white-text">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <!--Body-->
+                                        <div class="modal-body">
+                                            <div class="text-center">
+                                                <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                                            </div>
+                                            <ul class="list-group z-depth-0">
+                                                <li class="list-group-item justify-content-between">
+                                                    Cras justo odio
+                                                    <span class="badge badge-primary badge-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Dapibus ac facilisis in
+                                                    <span class="badge badge-primary badge-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item justify-content-between">
+                                                    Morbi leo risus
+                                                    <span class="badge badge-primary badge-pill">1</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer">
+                                            <a role="button" class="btn btn-danger">Get it now
+                                                <i class="fa fa-diamond ml-1"></i>
+                                            </a>
+                                            <a role="button" class="btn btn-outline-danger waves-effect"
+                                               data-dismiss="modal">No,
+                                                thanks</a>
+                                        </div>
+                                    </div>
+                                    <!--/.Content-->
+                                </div>
+                            </div>
+                            <!-- Full Height Modal Bottom Danger Demo-->
+
+                        </section>
+                        <!--Section: Modals-->
+
+                        <!-- Card header -->
+                        <div class="card-header">Modals</div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <div class="text-center mb-5">
+                                <p class="lead">Click buttons below to launch modals demo</p>
+                            </div>
+
+                            <!-- First row-->
+                            <div class="row">
+
+                                <!--First column-->
+                                <div class="col-md-3">
+                                    <h5 class="text-center mb-3">Frame Modal</h5>
+
+                                    <img src="https://mdbootstrap.com/img/brandflow/modal4.jpg" alt="MDB graphics"
+                                         class="img-fluid z-depth-1">
+                                    <div class="text-center">
+                                        <h5 class="my-3">Position</h5>
+
+                                        <a class="btn btn-primary btn-sm" data-toggle="modal"
+                                           data-target="#frameModalTopInfoDemo"
+                                           data-backdrop="false">Top</a>
+                                        <br>
+                                        <a class="btn btn-primary btn-sm" data-toggle="modal"
+                                           data-target="#frameModalBottomSuccessDemo"
+                                           data-backdrop="false">Bottom</a>
+                                    </div>
+                                </div>
+                                <!--First column-->
+
+                                <!--Second column-->
+                                <div class="col-md-3">
+                                    <h5 class="text-center mb-3">Side Modal</h5>
+
+                                    <img src="https://mdbootstrap.com/img/brandflow/modal3.jpg" alt="MDB graphics"
+                                         class="img-fluid z-depth-1">
+                                    <div class="text-center">
+                                        <h5 class="my-3">Position</h5>
+
+                                        <a class="btn btn-primary btn-sm" data-toggle="modal"
+                                           data-target="#sideModalTRSuccessDemo"
+                                           data-backdrop="false">Top Right</a>
+                                        <br>
+                                        <a class="btn btn-primary btn-sm" data-toggle="modal"
+                                           data-target="#sideModalTLInfoDemo">Top
+                                            Left</a>
+                                        <br>
+                                        <a class="btn btn-primary btn-sm" data-toggle="modal"
+                                           data-target="#sideModalBRDangerDemo">Bottom
+                                            Right</a>
+                                        <br>
+                                        <a class="btn btn-primary btn-sm" data-toggle="modal"
+                                           data-target="#sideModalBLWarningDemo">Bottom
+                                            Left</a>
+                                    </div>
+                                </div>
+                                <!--Second column-->
+
+                                <!--Third column-->
+                                <div class="col-md-3">
+                                    <h5 class="text-center mb-3">Central Modal</h5>
+
+                                    <img src="https://mdbootstrap.com/img/brandflow/modal2.jpg" alt="MDB graphics"
+                                         class="img-fluid z-depth-1">
+                                    <div class="text-center">
+                                        <h5 class="my-3">Size</h5>
+
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                                data-target="#modalLoginAvatarDemo">Small
+                                        </button>
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                                data-target="#modalLRFormDemo">Medium
+                                        </button>
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                                data-target="#centralModalLGInfoDemo">Large
+                                        </button>
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                                data-target="#centralModalFluidSuccessDemo">Fluid
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--Third column-->
+
+                                <!--Fourth column-->
+                                <div class="col-md-3">
+                                    <h5 class="text-center mb-3">Fluid Modal</h5>
+
+                                    <img src="https://mdbootstrap.com/img/brandflow/modal1.jpg" alt="MDB graphics"
+                                         class="img-fluid z-depth-1">
+                                    <div class="text-center">
+                                        <h5 class="my-3">Position</h5>
+
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                                data-target="#fluidModalRightSuccessDemo">Right
+                                        </button>
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                                data-target="#fluidModalLeftInfoDemo">Left
+                                        </button>
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                                data-target="#fluidModalTopWarningDemo">Top
+                                        </button>
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                                data-target="#fluidModalBottomDangerDemo">Bottom
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--Fourth column-->
+
+                            </div>
+                            <!-- /.First row-->
+
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn">
+
+        <!--Call to action-->
+        <div class="pt-4">
+            <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/"
+               target="_blank"
+               role="button">Download
+                MDB
+                <i class="fa fa-download ml-2"></i>
+            </a>
+            <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank"
+               role="button">Start
+                free tutorial
+                <i class="fa fa-graduation-cap ml-2"></i>
             </a>
         </div>
-        <div class="col-sm-3 text-center">
-            <ul class="social-n mt-5">
-                <li class=""><a class="mr-3" href="https://www.instagram.com/pedkoledzh1/" target="_blank"><i
-                            class="fab fa-instagram"></i></a></li>
-                <li class=""><a class="mr-3" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li class=""><a class="mr-3" href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-            </ul>
+        <!--/.Call to action-->
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+                <i class="fab fa-facebook-f mr-3"></i>
+            </a>
+
+            <a href="https://twitter.com/MDBootstrap" target="_blank">
+                <i class="fab fa-twitter mr-3"></i>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+                <i class="fab fa-youtube mr-3"></i>
+            </a>
+
+            <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+                <i class="fab fa-google-plus mr-3"></i>
+            </a>
+
+            <a href="https://dribbble.com/mdbootstrap" target="_blank">
+                <i class="fab fa-dribbble mr-3"></i>
+            </a>
+
+            <a href="https://pinterest.com/mdbootstrap" target="_blank">
+                <i class="fab fa-pinterest mr-3"></i>
+            </a>
+
+            <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+                <i class="fab fa-github mr-3"></i>
+            </a>
+
+            <a href="http://codepen.io/mdbootstrap/" target="_blank">
+                <i class="fab fa-codepen mr-3"></i>
+            </a>
         </div>
-    </div>
-    <nav class="navbar body-wrap navbar-expand-lg navbar-dark blue-gradient">
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent-333"
-                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-            <ul class="navbar-nav nav font-weight-bold mr-auto">
-                <li class="nav-item mr-4">
-                    <a class="nav-link" href="#">ЖАҢАЛЫҚТАР
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link" href="#">ҚР президентінің жолдауы</a>
-                </li>
-                <li class="nav-item dropdown" data-animations="fadeInDown fadeInRight fadeInUp fadeInLeft">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Мемлекеттік рәмаіздер</a>
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">мемлекеттік рәміздер туралы</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>-->
-                <li class="nav-item mr-4">
-                    <a class="nav-link" href="#">ТАЛАПКЕРГЕ</a>
-                </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link" href="#">ГАЛЕРЕЯ</a>
-                </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link" href="#">БАЙЛАНЫСТАР</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav nav font-weight-bold ml-auto">
-                <li class="nav-item">
-                    <form class="form-inline">
-                        <div class="md-form my-0">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Іздеу жолын енгізу..."
-                                   aria-label="Search">
-                        </div>
-                        <a href="#" type="submit">
-                            <i class="fas fa-search white-text"></i>
-                        </a>
-                    </form>
-                </li>
-            </ul>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
         </div>
-    </nav>
-    <!--/.Navbar -->
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
 </div>
-<!--main-->
-<div class="container container-mobile-fluid">
-    <div class="card main-card">
-        <div class="row">
-            <div class="col-sm-3 body-wrap">
-                <ul class="nav ml-4 mt-3">
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Директордың сәлемдесуі
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Үлгі
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Колледж тарихы
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Әкімшілік
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Халықаралық әріптестік
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Оқытушылар
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Біздің жетістіктеріміз
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Қоңырау кестесі
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Оқу тәрбие жұмысы
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Мемлекеттік сатып алу
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Мемлекеттік қызметтер
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Нормативті құқықтық актілер
-                        </a>
-                        <hr style="width: 100%;"/>
-                    </li>
-                    <li class="w-100">
-                        <a class="ls" href="#">
-                            Мемлекеттік рәміздер
-                        </a>
-                    </li>
-                </ul>
-                <div class="w-100 mt-4 p-4 font-weight-bold" style="background-color: #1676CD; color: #fff;">
-                    Сайттың аналитикасы
-                </div>
-                <div class="p-4">
-                    <div class="row" style="font-size: 14px;">
-                        <div class="col-sm-12">
-                            <span>Бүгін</span><i class="float-right font-weight-bold">238</i>
-                        </div>
-                        <div class="col-sm-12">
-                            <span>Кеше</span><i class="float-right font-weight-bold">353</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-100 p-4 font-weight-bold" style="background-color: #1676CD; color: #fff;">
-                    Жаңалықтар мұрағаты
-                </div>
-                <!--<div class="m-2" id="app">
-                    <v-app id="inspire">
-                        <v-row justify="center">
-                            <v-date-picker v-model="picker"></v-date-picker>
-                        </v-row>
-                    </v-app>
-                </div>-->
-            </div>
-            <div class="col-sm-6">
-                <div class="ml-2 mr-2 mt-3">
-                    <div class="h1 archive-news">
-                        Жаңалықтар мұрағаты
-                        <a href="#" class="ls pt-2">Жаңалықтар мұрағаты</a>
-                    </div>
-                    <hr style="border: 1px solid #ebebeb;"/> <!--#a1c4fd-->
-
-                    <div class="row">
-                        <div class="col-lg-12 col-xl-12 mb-2">
-                            <a class="news-title" href="#">
-                                «The Best Mobile App – 2019»
-                            </a>
-                            <dt class="date-and-view">
-                                24 Желтоқсан 2019 жыл.
-                                <i class="fas fa-eye pl-4"> 14</i>
-                            </dt>
-                        </div>
-                        <div class="col-sm-5 col-lg-4 col-xl-3">
-                            <div class="view overlay mb-lg-0 mb-4 bor-r" style="width: 120px; height: 120px;">
-                                <img class="bor-r"
-                                     src="http://ped-kollege.kz/upload/news/news_a08f339931509d5a137a80b9fd61acd7_thumb.jpg"
-                                     alt="Sample image"
-                                     style="width: 120px; height: 120px; background-repeat: no-repeat; background-size: cover;">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm7 col-lg-8 col-xl-9">
-                            <p class="archive-news-text ">Павлодар облысы білім беру басқармасы мен облыстық
-                                ақпараттық технологиялар орталығы бағдарламалық қамтамасыздандыруды әзірлеу
-                                саласында инновациялық технологиялардың рөлін арттыру, мобильді платформалардың
-                                қосымшаларын бағдарламалау және дизайн саласында оқушылардың...</p>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="col-lg-12 col-xl-12 mb-2">
-                            <a class="news-title" href="#">
-                                Әскери-қолданбалы спорт түрінен жарыс
-                            </a>
-                            <dt class="date-and-view">
-                                13 Желтоқсан 2019 жыл.
-                                <i class="fas fa-eye pl-4"> 17</i>
-                            </dt>
-                        </div>
-                        <div class="col-sm-5 col-lg-4 col-xl-3">
-                            <div class="view overlay mb-lg-0 mb-4 bor-r" style="width: 120px; height: 120px;">
-                                <img class="bor-r"
-                                     src="http://ped-kollege.kz/upload/news/news_dcd561ba0f868b9e457770fcb86a1d7c_thumb.jpg"
-                                     alt="Sample image"
-                                     style="width: 120px; height: 120px; background-repeat: no-repeat; background-size: cover;">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm7 col-lg-8 col-xl-9">
-                            <p class="archive-news-text ">
-                                13 желтоқсанда Ауғанстан және Жергілікті соғыс ардагерлері одағының қолдауымен Қазақстан
-                                Республикасының Тәуелсіздік күніне және Ұлы Отан Соғысы Жеңісінің 75 жылдығына арналған
-                                Монтаждық колледжде әскери жарыс өтті. Жарысқа 15 команда, оның ішінде Б.Ахметов
-                                атындағы педагогикалық...</p>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="col-lg-12 col-xl-12 mb-2">
-                            <a class="news-title" href="#">
-                                "Жаңартылған білім беру ортасындағы мұғалімнің рөлдік трансформациясы" тақырыбында
-                                интерактивті сабақ
-                            </a>
-                            <dt class="date-and-view">
-                                11 Желтоқсан 2019 жыл.
-                                <i class="fas fa-eye pl-4"> 36</i>
-                            </dt>
-                        </div>
-                        <div class="col-sm-5 col-lg-4 col-xl-3">
-                            <div class="view overlay mb-lg-0 mb-4 bor-r" style="width: 120px; height: 120px;">
-                                <img class="bor-r"
-                                     src="http://ped-kollege.kz/upload/news/news_5545ea14605a729bad9457e45b34e36c_thumb.jpg"
-                                     alt="Sample image"
-                                     style="width: 120px; height: 120px; background-repeat: no-repeat; background-size: cover;">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-7 col-lg-8 col-xl-9">
-                            <p class="archive-news-text ">Колледждің 90 жылдық мерейтойы аясында педагогика және
-                                психология оқытушысы У.В. Комлева "Жаңартылған білім беру ортасындағы мұғалімнің рөлдік
-                                трансформациясы" тақырыбында интерактивті сабақ өткізді. Заманауи мұғалімнің функциялары
-                                мен рөлінің өзгеруін бірнеше кезеңдерінің колледж...</p>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="col-lg-12 col-xl-12 mb-2">
-                            <a class="news-title" href="#">
-                                Интерактивный урок на тему «Ролевая трансформация учителя в обновленной образовательной
-                                среде»
-                            </a>
-                            <dt class="date-and-view">
-                                11 Желтоқсан 2019 жыл.
-                                <i class="fas fa-eye pl-4"> 39</i>
-                            </dt>
-                        </div>
-                        <div class="col-sm-5 col-lg-4 col-xl-3">
-                            <div class="view overlay mb-lg-0 mb-4 bor-r" style="width: 120px; height: 120px;">
-                                <img class="bor-r"
-                                     src="http://www.ped-kollege.kz/upload/news/news_5545ea14605a729bad9457e45b34e36c_thumb.jpg"
-                                     alt="Sample image"
-                                     style="width: 120px; height: 120px; background-repeat: no-repeat; background-size: cover;">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm7 col-lg-8 col-xl-9">
-                            <p class="archive-news-text ">
-                                В рамках празднования 90-летия колледжа преподавателем педагогики и психологии Комлевой
-                                У..В.
-                                был проведен интерактивный урок на тему «Ролевая трансформация учителя в обновленной
-                                образовательной среде». Изменение функций и ролей современного педагога рассматривали
-                                несколько
-                                поколений выпускников и педагогов колледжа. Активное участие в...</p>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="col-lg-12 col-xl-12 mb-2">
-                            <a class="news-title" href="#">
-                                90-летие Педагогического высшего колледжа имени Б. Ахметова
-                            </a>
-                            <dt class="date-and-view">
-                                10 Желтоқсан 2019 жыл.
-                                <i class="fas fa-eye pl-4"> 83</i>
-                            </dt>
-                        </div>
-                        <div class="col-sm-5 col-lg-4 col-xl-3">
-                            <div class="view overlay mb-lg-0 mb-4 bor-r" style="width: 120px; height: 120px;">
-                                <img class="bor-r"
-                                     src="http://www.ped-kollege.kz/upload/news/news_718693c4cc602deb091102f941eaefbd_thumb.jpg"
-                                     alt="Sample image"
-                                     style="width: 120px; height: 120px; background-repeat: no-repeat; background-size: cover;">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm7 col-lg-8 col-xl-9">
-                            <p class="archive-news-text ">
-                                6 декабря 2019 года, в завершении юбилейных мероприятий, посвященных 90-летию
-                                Педагогического
-                                высшего колледжа имени Б. Ахметова, состоялся ряд праздничных торжеств.Так, в 9.45 часов
-                                в
-                                сквере Педагогического колледжа были возложены цветы к памятнику ветерана
-                                педагогического труда,
-                                отличнику народного просвещения, заслуженному учителю...</p>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="col-lg-12 col-xl-12 mb-2">
-                            <a class="news-title" href="#">
-                                Соревновании по баскетболу
-                            </a>
-                            <dt class="date-and-view">
-                                10 Желтоқсан 2019 жыл.
-                                <i class="fas fa-eye pl-4"> 49</i>
-                            </dt>
-                        </div>
-                        <div class="col-sm-5 col-lg-4 col-xl-3">
-                            <div class="view overlay mb-lg-0 mb-4 bor-r" style="width: 120px; height: 120px;">
-                                <img class="bor-r"
-                                     src="http://www.ped-kollege.kz/upload/news/news_da7a25814dc4561f48965a7d9b355e27_thumb.jpg"
-                                     alt="Sample image"
-                                     style="width: 120px; height: 120px; background-repeat: no-repeat; background-size: cover;">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm7 col-lg-8 col-xl-9">
-                            <p class="archive-news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet animi cum cumque
-                                debitis enim excepturi, facere fuga illum iste laborum magnam molestias non numquam
-                                ratione saepe voluptatum. Ad architecto cum labore molestiae perferendis provident
-                                similique soluta vitae. Alias dolores iste mollitia repellendus vitae?</p>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="col-lg-12 col-xl-12 mb-2">
-                            <a class="news-title" href="#">
-                                Тренинг для подростков на тему «Мы вместе!»
-                            </a>
-                            <dt class="date-and-view">
-                                06 Желтоқсан 2019 жыл.
-                                <i class="fas fa-eye pl-4"> 32 </i>
-                            </dt>
-                        </div>
-                        <div class="col-sm-5 col-lg-4 col-xl-3">
-                            <div class="view overlay mb-lg-0 mb-4 bor-r" style="width: 120px; height: 120px;">
-                                <img class="bor-r"
-                                     src="http://www.ped-kollege.kz/upload/news/news_da860897058a2f7d93cbd41e1404cdb8_thumb.jpg"
-                                     alt="Sample image"
-                                     style="width: 120px; height: 120px; background-repeat: no-repeat; background-size: cover;">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm7 col-lg-8 col-xl-9">
-                            <p class="archive-news-text ">
-                                6 декабря в колледже был организован тренинг для подростков на тему «Мы вместе!».
-                                Приняли
-                                участие студенты группы БШТ-21. Ответственный за тренинг психолог Жылкайдарова С.Б. В
-                                ходе
-                                тренинга были проведены работы, направленные на объединение студенческого коллектива
-                                подросткового возраста.</p>
-                        </div>
-                    </div>
-                    <hr/><!--this-is-for-git-i-don't-understand?-->
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="right-sidebar text-center mt-2">
-                    <a href="#">
-                        <div class="m-2 rs z-depth-1">
-                            <img class="img-fluid rs-img"
-                                 src="http://ped-kollege.kz/templates/college/static/images/b1.png" alt="">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="m-2 rs z-depth-1">
-                            <img class="img-fluid rs-img"
-                                 src="http://ped-kollege.kz/templates/college/static/images/b2.png" alt="">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="m-2 rs z-depth-1">
-                            <img class="img-fluid rs-img"
-                                 src="http://ped-kollege.kz/templates/college/static/images/b3.png" alt="">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="m-2 rs z-depth-1">
-                            <img class="img-fluid rs-img"
-                                 src="http://aktogay.pavlodar.gov.kz/templates/default/static/img/banner_vibori_19_kz.jpg"
-                                 alt="">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="m-2 rs z-depth-1">
-                            <img class="img-fluid rs-img"
-                                 src="http://ped-kollege.kz/templates/college/static/images/b4.jpeg" alt="">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="m-2 rs z-depth-1">
-                            <img class="img-fluid rs-img"
-                                 src="http://ped-kollege.kz/templates/college/static/images/b5_kz.jpg?2" alt="">
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--carousel-1-->
-<div class="container container-mobile-fluid mt-4">
-    <div class="card" style="border-radius: 10px;">
-        <div class="card-body">
-
-
-        </div>
-    </div>
-</div>
-<!--carousel-2-->
-<div class="container container-mobile-fluid mt-4">
-    <div class="card bor-r">
-        <div class="card-body">
-
-
-            <div id="demo" class="carousel slide" data-ride="carousel">
-
-                <!-- Indicators -->
-                <!--<ul class="carousel-indicators">
-                    <li data-target="#demo" data-slide-to="0" class="active"></li>
-                    <li data-target="#demo" data-slide-to="1"></li>
-                    <li data-target="#demo" data-slide-to="2"></li>
-                </ul>-->
-
-                <!-- The slideshow -->
-                <div class="container carousel-inner no-padding">
-                    <div class="carousel-item active">
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3">
-                            <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
-
-
-        </div>
-    </div>
-</div>
-<!--footer-->
-<div class="container container-mobile-fluid">
-    <div class="card mt-4 mb-4 pb-2" style="border-radius: 10px; background-color: #9CBAC8;">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card-body">
-                    <!--Google map-->
-                    <div id="map-container-google-1" class="z-depth-1-half map-container"
-                         style="height: 277px; border-radius: 10px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.68043782048!2d76.96282191544799!3d43.30001347913495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836db2c8a1a3f9%3A0x5a6fd20dc1f79081!2z0J_QtdC00LDQs9C-0LPQuNGH0LXRgdC60LjQuSDQutC-0LvQu9C10LTQtg!5e0!3m2!1sru!2skz!4v1578221004728!5m2!1sru!2skz"
-                                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                    </div>
-                    <!--Google Maps-->
-                </div>
-            </div>
-            <div class="col-sm-3 mt-3">
-                <div>
-                    <b>
-                        Қазақстан, Алматы қ.
-                    </b>
-                    <p>Шемякин көшесі 131 үй,</p>
-                    <b>Қабылдау бөлмесі:</b>
-                    <p>2-78-56-84, 2-90-87-44</p>
-                    <b>
-                        e-mail:
-                    </b>
-                    <a class="links" href="#">
-                        pedkol1@inbox.ru
-                    </a>
-                    <a class="links" href="#">
-                        http://ped1.kazobr.kz
-                    </a>
-                    <hr/>
-                    <b>Сенім телефоны:
-                    </b>
-                    <p>
-                        2-78-56-84, 2-90-87-44
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-3 mt-3">
-                <div>
-                    <a class="links font-weight-bold" href="#"><i class="fas fa-home"></i> Басты</a>
-                    <div class="mt-3">
-                        <ul class="links-footer">
-                            <li class="links-li"><a class="links" href="#">ҚР Президентінің Жолдауы</a></li>
-                            <li class="links-li"><a class="links" href="#">Мемлекеттік рәміздер</a></li>
-                            <li class="links-li"><a class="links" href="#">Ғаламторлық қабылдау</a></li>
-                            <li class="links-li"><a class="links" href="#">Жаңалықтар</a></li>
-                            <li class="links-li"><a class="links" href="#">Колледж туралы</a></li>
-                            <li class="links-li"><a class="links" href="#">Сайт картасы</a></li>
-                            <li class="links-li"><a class="links" href="#">RSS</a></li>
-                        </ul>
-                        <hr class="ml-4 mr-4"/>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--End your project her-->
 @include('layouts.scripts')
-<!-- Your custom scripts (optional) -->
-<script type="text/javascript">
-    /*new Vue({
-        el: '#app',
-        vuetify: new Vuetify(),
-        data () {
-            return {
-                picker: new Date().toISOString().substr(0, 10),
-            }
+<script>
+    //tooltip-own-of-course
+    $(document).ready(function () {
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+
+    });
+    // Line
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
         },
-    });*/
-    $('ul.nav li.dropdown').hover(function () {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function () {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    //pie
+    var ctxP = document.getElementById("pieChart").getContext('2d');
+    var myPieChart = new Chart(ctxP, {
+        type: 'pie',
+        data: {
+            labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+            datasets: [{
+                data: [300, 50, 100, 40, 120],
+                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+            }]
+        },
+        options: {
+            responsive: true,
+            legend: false
+        }
+    });
+
+
+    //line
+    var ctxL = document.getElementById("lineChart").getContext('2d');
+    var myLineChart = new Chart(ctxL, {
+        type: 'line',
+        data: {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [{
+                label: "My First dataset",
+                backgroundColor: [
+                    'rgba(105, 0, 132, .2)',
+                ],
+                borderColor: [
+                    'rgba(200, 99, 132, .7)',
+                ],
+                borderWidth: 2,
+                data: [65, 59, 80, 81, 56, 55, 40]
+            },
+                {
+                    label: "My Second dataset",
+                    backgroundColor: [
+                        'rgba(0, 137, 132, .2)',
+                    ],
+                    borderColor: [
+                        'rgba(0, 10, 130, .7)',
+                    ],
+                    data: [28, 48, 40, 19, 86, 27, 90]
+                }
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+
+    //radar
+    var ctxR = document.getElementById("radarChart").getContext('2d');
+    var myRadarChart = new Chart(ctxR, {
+        type: 'radar',
+        data: {
+            labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+            datasets: [{
+                label: "My First dataset",
+                data: [65, 59, 90, 81, 56, 55, 40],
+                backgroundColor: [
+                    'rgba(105, 0, 132, .2)',
+                ],
+                borderColor: [
+                    'rgba(200, 99, 132, .7)',
+                ],
+                borderWidth: 2
+            }, {
+                label: "My Second dataset",
+                data: [28, 48, 40, 19, 96, 27, 100],
+                backgroundColor: [
+                    'rgba(0, 250, 220, .2)',
+                ],
+                borderColor: [
+                    'rgba(0, 213, 132, .7)',
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    //doughnut
+    var ctxD = document.getElementById("doughnutChart").getContext('2d');
+    var myLineChart = new Chart(ctxD, {
+        type: 'doughnut',
+        data: {
+            labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+            datasets: [{
+                data: [300, 50, 100, 40, 120],
+                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+    new WOW().init();
+
+    // Regular map
+    function regular_map() {
+        var var_location = new google.maps.LatLng(40.725118, -73.997699);
+
+        var var_mapoptions = {
+            center: var_location,
+            zoom: 14
+        };
+
+        var var_map = new google.maps.Map(document.getElementById("map-container"),
+            var_mapoptions);
+
+        var var_marker = new google.maps.Marker({
+            position: var_location,
+            map: var_map,
+            title: "New York"
+        });
+    }
+
+    // Initialize maps
+    google.maps.event.addDomListener(window, 'load', regular_map);
+
+    new Chart(document.getElementById("horizontalBar"), {
+        "type": "horizontalBar",
+        "data": {
+            "labels": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey"],
+            "datasets": [{
+                "label": "My First Dataset",
+                "data": [22, 33, 55, 12, 86, 23, 14],
+                "fill": false,
+                "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
+                    "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)",
+                    "rgba(54, 162, 235, 0.2)",
+                    "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"
+                ],
+                "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)",
+                    "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)",
+                    "rgb(201, 203, 207)"
+                ],
+                "borderWidth": 1
+            }]
+        },
+        "options": {
+            "scales": {
+                "xAxes": [{
+                    "ticks": {
+                        "beginAtZero": true
+                    }
+                }]
+            }
+        }
     });
 </script>
-
 </body>
-</html>--}}
+</html>
