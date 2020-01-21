@@ -15,10 +15,10 @@
         <div class="col-sm-3 mt-3">
             <div>
                 <b>
-                    Қазақстан, Алматы қ.
+                    {{__('messages.Kazakhstan')}}, {{__('messages.almaty_city')}}
                 </b>
-                <p>Шемякин көшесі 131 үй,</p>
-                <b>Қабылдау бөлмесі:</b>
+                <p>{{__('messages.college_street')}}</p>
+                <b>{{__('messages.reception')}}</b>
                 <p>2-78-56-84, 2-90-87-44</p>
                 <b>
                     e-mail:
@@ -30,7 +30,7 @@
                     http://ped1.kazobr.kz
                 </a>
                 <hr/>
-                <b>Сенім телефоны:
+                <b>{{__('messages.helpline')}}
                 </b>
                 <p>
                     2-78-56-84, 2-90-87-44
@@ -39,23 +39,24 @@
         </div>
         <div class="col-sm-3 mt-3">
             <div>
-                <a class="links font-weight-bold" href="{{ url('/') }}"><i class="fas fa-home"></i> Басты</a>
+                <a class="links font-weight-bold" href="{{ url('/') }}"><i class="fas fa-home"></i> {{__('messages.HOME')}}</a>
                 <div class="mt-3">
                     <ul class="links-footer">
-                        <li class="links-li"><a class="links" href="{{ url('president/message') }}">ҚР Президентінің Жолдауы</a></li>
-                        <li class="links-li"><a class="links" href="{{ url('spiritual_revivals') }}">Мемлекеттік рәміздер</a></li>
-                        <li class="links-li"><a class="links" href="#">Ғаламторлық қабылдау</a></li>
-                        <li class="links-li"><a class="links" href="{{ url('/') }}">Жаңалықтар</a></li>
-                        <li class="links-li"><a class="links" href="#">Колледж туралы</a></li>
+                        <li class="links-li"><a class="links" href="{{ url('president/message') }}">{{__('messages.pre_mes')}}</a></li>
+                        <li class="links-li"><a class="links" href="{{ url('spiritual_revivals') }}">{{__('messages.state_symbols')}}</a></li>
+                        <li class="links-li"><a class="links" href="{{ url('/') }}">{{__('messages.NEWS')}}</a></li>
                         {{--<li class="links-li"><a class="links" href="#">Сайт картасы</a></li>--}}
                         {{--<li class="links-li"><a class="links" href="#">RSS</a></li>--}}
                     </ul>
                     <hr class="ml-4 mr-4"/>
                     <ul class="social-n"> {{--Ссылканы li-дің сыртына қою керек сияқты крч пересмотреть--}}
-                        <li class="p-1 mr-2 insta"><a class="m-2" href="https://www.instagram.com/pedkoledzh1/" target="_blank"><i
+                        <li class="p-1 mr-2 insta"><a class="m-2" href="https://www.instagram.com/pedkoledzh1/"
+                                                      target="_blank"><i
                                     class="fab fa-instagram"></i></a></li>
-                        <li class="p-1 mr-2 face"><a class="m-2" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="p-1 mr-2 vk"><a class="m-2" href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                        <li class="p-1 mr-2 face"><a class="m-2" href="#" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li class="p-1 mr-2 vk"><a class="m-2" href="#" target="_blank"><i class="fab fa-vk"></i></a>
+                        </li>
                     </ul>
                 </div>
 

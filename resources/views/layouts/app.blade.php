@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <b>Admin Dashboard</b>
+                        <b>{{__('messages.admin_dashboard')}}</b>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

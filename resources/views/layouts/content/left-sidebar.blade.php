@@ -2,79 +2,73 @@
     <ul class="nav ml-2 mt-3">
         <li class="w-100">
             <a class="ls" href="{{ url('/director_h') }}">
-                Директордың сәлемдесуі
+                {{__('messages.directors_greeting')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/category/gos') }}">
-                Мемлекеттік рәміздер
+                {{__('messages.state_symbols')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/sample') }}">
-                Үлгі
+                {{__('messages.sample')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/college_history') }}">
-                Колледж тарихы
-            </a>
-            <hr style="width: 100%;"/>
-        </li>
-        <li class="w-100">
-            <a class="ls" href="{{ url('/administration') }}">
-                Әкімшілік
+                {{__('messages.college_history')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/international_cooperation') }}">
-                Халықаралық әріптестік
+                {{__('messages.international_cooperation')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/teachers') }}">
-                Оқытушылар
+                {{__('messages.teachers')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/our_achievements') }}">
-                Біздің жетістіктеріміз
+                {{__('messages.our_achievements')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/call_schedule') }}">
-                Қоңырау кестесі
+                {{__('messages.call_schedule')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/public_procurement') }}">
-                Оқу тәрбие жұмысы
+                {{__('messages.educational_work')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/public_procurement') }}">
-                Мемлекеттік сатып алу
+                {{__('messages.state_purchases')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/state_services') }}">
-                Мемлекеттік қызметтер
+                {{__('messages.government_services')}}
             </a>
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
             <a class="ls" href="{{ url('/regulatory_legal_acts') }}">
-                Нормативті құқықтық актілер
+                {{__('messages.regulatory_legal_acts')}}
             </a>
 
         </li>
