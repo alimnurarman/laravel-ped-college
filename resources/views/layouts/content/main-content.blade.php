@@ -1,4 +1,4 @@
-<div class="main-content ml-2 mr-2 mt-3">
+<div class="main-content mt-3">
     <div class="h1 archive-news">
         {{__('messages.news_archive')}}
         <a href="#" class="ls pt-2">{{__('messages.news_archive')}}</a>
@@ -6,7 +6,7 @@
     <hr style="border: 1px solid #ebebeb;"/> <!--#a1c4fd-->
     <div class="row">
         @foreach($posts as $post)
-            <div class="col-lg-12 col-xl-12 mb-2">
+            {{--<div class="col-lg-12 col-xl-12 mb-2">
                 <a class="news-title" href="#">
                     {{$post->title}}
                 </a>
@@ -19,7 +19,7 @@
                 <a class="date-and-view">
                     {{$post->description}}
                 </a>
-            </div>
+            </div>--}}
         @endforeach
         <div class="col-lg-12 col-xl-12 mb-2">
             <a class="news-title" href="#">

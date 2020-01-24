@@ -22,7 +22,7 @@
     </div>
     <div class="col-sm-3 text-center">
         <ul class="lang mt-5">
-            <li class="nav-item"><a class="nav-link" href="{{ url('locale/kz') }}">ҚАЗ</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{{ url('locale/kz') }}">ҚАЗ</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url('locale/ru') }}">РУС</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url('locale/en') }}">ENG</a></li>
         </ul>

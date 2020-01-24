@@ -49,7 +49,7 @@
             <hr style="width: 100%;"/>
         </li>
         <li class="w-100">
-            <a class="ls" href="{{ url('/public_procurement') }}">
+            <a class="ls" href="{{ url('/edu_work') }}">
                 {{__('messages.educational_work')}}
             </a>
             <hr style="width: 100%;"/>
