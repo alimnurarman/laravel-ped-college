@@ -120,6 +120,13 @@ class PagesController extends Controller
     public function page2(){
         return view('layouts\sidebar2\spiritualrevival\category\page2');
     }
+    public function emblem(){
+        return view('layouts\sidebar2\spiritualrevival\category\emblem');
+    }
+    public function anthem(){
+        return view('layouts\sidebar2\spiritualrevival\category\anthem');
+    }
+
     public function specialities(){
         return view('layouts\content\header-content\specialties');
     }
