@@ -11,14 +11,16 @@
 
             <!-- Category -->
             <a href="#" class="deep-orange-text">
-                <h6 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>Квалификация</h6>
+                <h6 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>{{__('messages.qualification')}}</h6>
             </a>
             <!-- Post title -->
-            <h5 class="font-weight-bold mb-3"><strong>0111000 <br> Базовое среднее образование</strong></h5>
-            <p class="dark-grey-text">011101 3 - «Учитель казахского языка и литературы» ; <br/> - 011102 3 - «Учитель
-                русского языка и литературы»;<br/> - 011108 3 - «Учитель иностранных языков средней школы»;<br/> -
+            <h5 class="font-weight-bold mb-3"><strong>0111000 <br> {{__('messages.basic_secondary_education')}}</strong>
+            </h5>
+            <p class="dark-grey-text">011101 3 - «{{__('messages.kazakh_language_and_literature_teacher')}}» ; <br/> -
+                011102 3 - «{{__('messages.teacher_of_russian_language_and_literature')}}»;<br/> - 011108 3 -
+                «{{__('messages.high_school_foreign_language_teacher')}}»;<br/> -
                 011109 3 -
-                «Учитель информатики в средней школе»</p>
+                «{{__('messages.computer_science_teacher_in_high_school')}}»</p>
             <hr/>
         </div>
         <!-- Grid column -->
@@ -36,12 +38,14 @@
 
             <!-- Category -->
             <a href="#" class="blue-text">
-                <h6 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>Квалификация</h6>
+                <h6 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>{{__('messages.qualification')}}</h6>
             </a>
             <!-- Post title -->
-            <h5 class="font-weight-bold mb-3"><strong>0105000 <br/> Начальное образование</strong></h5>
-            <p class="dark-grey-text">0105013 - «Учитель начального образования»; <br/> 0105083 «Учитель начального
-                образования с английским образованием»;<br/> - 0512000 - «Переводческие исследования».</p>
+            <h5 class="font-weight-bold mb-3"><strong>0105000 <br/> {{__('messages.elementary_education')}}</strong>
+            </h5>
+            <p class="dark-grey-text">0105013 - «{{__('messages.primary_education_teacher')}}»; <br/> 0105083
+                «{{__('messages.primary_education_teacher_with_english_education')}}»;<br/> - 0512000 -
+                «{{__('messages.translation_studies')}}».</p>
 
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 mb-lg-0 mb-4">
@@ -52,11 +56,12 @@
                 </a>
             </div>
             <a href="#" class="pink-text">
-                <h6 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>Квалификация</h6>
+                <h6 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>{{__('messages.qualification')}}</h6>
             </a>
-            <h5 class="font-weight-bold mb-3"><strong>0101000 <br/> Дошкольное образование и обучение</strong></h5>
+            <h5 class="font-weight-bold mb-3"><strong>0101000 <br/> {{__('messages.preschool_education_and_training')}}
+                </strong></h5>
             <!-- Excerpt -->
-            <p class="dark-grey-text">0101000 — «Дошкольное образование и обучение»</p>
+            <p class="dark-grey-text">0101000 — «{{__('messages.preschool_education_and_training_2')}}»</p>
             <hr/>
         </div>
     </div>

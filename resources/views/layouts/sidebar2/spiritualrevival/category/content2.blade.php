@@ -1,6 +1,5 @@
 <div class="pt-3">
-    <div class="h1 archive-news">ГОСУДАРСТВЕННЫЙ ФЛАГ РЕСПУБЛИКИ КАЗАХСТАН
-    </div>
+    <h5 class="font-weight-bold mb-3 text-center"><strong>{{__('messages.about_ss_flag')}}</strong></h5>
     <div class="d-flex justify-content-center">
         <img class="flag-img" src="http://www.akorda.kz/upload/content_files/simbols/flag.png" alt="">
     </div>

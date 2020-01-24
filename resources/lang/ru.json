@@ -1,0 +1,24 @@
+{
+    "Name": "Имя",
+    "Laravel": "Лэравел",
+    "Register": "Регистрация",
+    "Login": "Войти",
+    "Forgot Your Password?": "Забыли свой пароль?",
+    "Remember Me": "Запомнить меня",
+    "E-Mail Address": "E-mail адресс",
+    "Password": "Пароль",
+    "Confirm Password": "Подтвердите Пароль",
+
+    "Reception": "Прием",
+    "ALMATY KAZAKHSTAN HUMANITARIAN - PEDAGOGICAL COLLEGE": "АЛМАТИНСКИЙ КАЗАХСКИЙ ГУМАНИТАРНО-ПЕДАГОГИЧЕСКИЙ КОЛЛЕДЖ",
+
+    "Home": "Главная",
+    "News": "Новости",
+    "Applicant": "Заявитель",
+    "Search...": "Поиск...",
+
+
+    "Qualification": "Квалификация",
+    "News archive": "Архив новостей",
+    "Dashboard": "Админ панель"
+}

@@ -1,7 +1,7 @@
 <div class="mt-3">
-    <h5 class="font-weight-bold mb-3 text-center"><strong>ҚОҢЫРАУ КЕСТЕСІ</strong></h5>
+    <h5 class="font-weight-bold mb-3 text-center"><strong>{{__('messages.calling_schedule')}}</strong></h5>
     <div class="row">
-        <b class="mb-2">Сабақ кестесінің уақыты:</b>
+        <b class="mb-2">{{__('messages.schedule_time')}}</b>
         <div class="col-lg-12 col-md-12 col-sm-12">
             <ol class="pl-0" style="text-align: left; list-style: none;">
                 <li><em><strong> 8.00 – 9.30</strong></em></li>

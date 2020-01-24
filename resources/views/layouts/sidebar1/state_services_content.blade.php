@@ -1,11 +1,11 @@
 <div class="mt-3 mb-2">
-    <h5 class="font-weight-bold mb-3 text-center"><strong>Мемлекеттік қызметтер</strong></h5>
+    <h5 class="font-weight-bold mb-3 text-center"><strong>{{__('messages.state_services')}}</strong></h5>
     <div class="my-title text-left">
-        <p>УПРАВЛЕНИЕ ОБРАЗОВАНИЯ ГОРОДА АЛМАТЫ</p>
-        <p>АЛМАТИНСКИЙ ГОСУДАРСТВЕННЫЙ ПЕДАГОГИЧЕСКИЙ КОЛЛЕДЖ</p>
-        <p>ОНЛАЙН КАТАЛОГ</p>
-        <p>НОРМАТИВНО-ПРАВОВЫХ АКТОВ</p>
-        <p>ДЛЯ ОРГАНИЗАЦИЙ ТЕХНИЧЕСКОГО И ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ ГОРОДА АЛМАТЫ</p>
+        <p>{{__('messages.state_services_c_1')}}</p>
+        <p>{{__('messages.state_services_c_2')}}</p>
+        <p>{{__('messages.state_services_c_3')}}</p>
+        <p>{{__('messages.state_services_c_4')}}</p>
+        <p>{{__('messages.state_services_c_5')}}</p>
         <p>(по состоянию на 01.09.2018г.)</p>
         <p><i>Для доступа к выбранному документу необходимо установить курсор мышки на наименование
                 соответствующего документа, нажать кнопку на клавиатуре «ctrl» (появится изображение ладони)
