@@ -2,35 +2,35 @@
 
 return [
     'college_name' => 'ALMATY KAZAKH HUMANITARIAN - PEDAGOGICAL COLLEGE',
-    'reception'  => 'Reception',
+    'reception' => 'Reception',
 
 
-    'HOME'       => 'HOME',
-    'NEWS'       => 'NEWS',
+    'HOME' => 'HOME',
+    'NEWS' => 'NEWS',
     'APPLICANTS' => 'APPLICANTS',
-    'gallery'    => 'GALLERY',
-    'administration'     => 'ADMINISTRATION',
-    'search'     => 'Search...',
+    'gallery' => 'GALLERY',
+    'administration' => 'ADMINISTRATION',
+    'search' => 'Search...',
 
 
-    'directors_greeting'     => 'Director\'s greeting',
+    'directors_greeting' => 'Director\'s greeting',
     'college_administration' => 'College Administration',
-    'state_symbols'          => 'State symbols',
-    'sample'                 => 'Sample',
-    'college_history'        => 'College history',
+    'state_symbols' => 'State symbols',
+    'sample' => 'Sample',
+    'college_history' => 'College history',
     'international_cooperation' => 'International cooperation',
-    'teachers'               => 'Teachers',
-    'our_achievements'       => 'Our achievements',
-    'call_schedule'          => 'Call schedule',
-    'educational_work'       => 'Educational work',
-    'state_purchases'        => 'State purchases',
-    'government_services'    => 'Government services',
-    'regulatory_legal_acts'  => 'Regulatory legal acts',
+    'teachers' => 'Teachers',
+    'our_achievements' => 'Our achievements',
+    'call_schedule' => 'Call schedule',
+    'educational_work' => 'Educational work',
+    'state_purchases' => 'State purchases',
+    'government_services' => 'Government services',
+    'regulatory_legal_acts' => 'Regulatory legal acts',
 
 
     'news_archive' => 'News archive',
 
-    'college_director_name'  => '',
+    'college_director_name' => '',
     'director_of_college' => 'Director of college',
     'deputy_of_education' => 'Deputy director of the college for educational and methodical work',
     'deputy_for_academic_affairs' => 'Deputy Director of the College for Academic Affairs',
@@ -135,8 +135,13 @@ return [
     'about_ss_flag' => 'STATE FLAG OF THE REPUBLIC OF KAZAKHSTAN',
     'about_ss_emblem' => 'State Emblem of the Republic of Kazakhstan',
     'about_ss_anthem' => 'State anthem of the Republic of Kazakhstan',
-
-
+    'anthem_c_1' => 'Hymn is one of the main symbols of the state. Greek "hymn" The word "hymn" comes from the word "solemn song". The anthem is beneficial to the citizens of the country important and important for socio-political integration and ethnocultural identification. is a sound symbol.',
+    'anthem_c_2' => 'Twice in the history of independent Kazakhstan the national anthem of the country - 1992 and It was approved in 2006.',
+    'anthem_c_3' => 'In 1992, after gaining state sovereignty, Kazakhstan competition for music and text of the anthem has been announced. Following the results of the competition the musical anthem of the Kazakh Soviet Socialist Republic It was decided to keep the edition. Thus the music of the first anthem of independent Kazakhstan The authors were Mukan Tulebayev, Eugene Brusilovsky and Latif Khamidi. In addition, to the best text Authors\' poets, well-known poets Muzafar Alimbayev, Kadyr Myrzaliev, Tumanbai Moldagaliev and Zhadyra Daribayeva.',
+    'anthem_c_4' => 'New in 2006 to increase the popularity of the sound symbol of the country The national anthem was adopted. Its basis is "My Kazakhstan", which is popular with the population. patriotic song selected. The song was written in 1956 by Shamshi Kaldayakov to Zhumeken Nazhimedenovit was. The President of Kazakhstan, Nursultan Nazarbayev, shall assign the song the highest status of a national anthem and edited the original piece of the musical work to make it more solemn. Parliament of Kazakhstan 2006 January 6, 2014 at a joint sitting of the chambers - a corresponding amendment to the Decree "On State Symbols" and introduced a new national anthem of the country.',
+    'anthem_official' => 'Anthem of the Republic of Kazakhstan (1.71 Mb, zip)',
+    'anthem_writers' => 'Words by:',
+    'anthem_w_song' => 'Wrote the song:',
 
 
 ];
