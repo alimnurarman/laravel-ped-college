@@ -143,6 +143,16 @@ return [
     'anthem_writers' => 'Words by:',
     'anthem_w_song' => 'Wrote the song:',
 
+    'emblem_c_1' => 'The coat of arms is one of the main symbols of the state. The term emblem ("coat of arms") comes from the German word "erbe" (inheritance). & Nbsp; reflecting historical tradition symbolizes the harmonious identity of harmonious forms and objects with symbolic meaning.',
+    'emblem_c_2' => 'After the Bronze Age nomads inhabiting the territory of modern Kazakhstan The history is a testimony to the fact that the graphic concept manifested itself through a special symbol-totem, called the "symbol." sit down. For the first time, the term was used during the Turkic Khaganate.',
+    'emblem_c_3' => 'The Emblem of sovereign Kazakhstan was officially adopted in 1992. Her Its authors are well-known architects Zhandarbek Malibekov and Shot-Aman Valikhanov.',
+    'emblem_c_4' => 'The Emblem of sovereign Kazakhstan was officially adopted in 1992. Her Its authors are well-known architects Zhandarbek Malibekov and Shot-Aman Valikhanov.',
+    'emblem_c_5' => 'The central heraldic element of the state emblem is the blue color Shanyrak (the upper dome-shaped part of the yurt) in the background. Sun around the shanyrak Uyghurs, like those, spread out To the right and to the left of the shanyrak are images of mythical winged horsesplaced. In the upper part - a five-pointed star and in the lower part - "Kazakhstan" There is an inscription. The image of a star, shanyrak, uyks, mythical winged horses, as well as & nbsp; The inscription "Kazakhstan" is golden.',
+    'emblem_c_6' => 'Reminiscent of the Blue Dome and in the traditional culture of nomadic Eurasia One of the main sources of life is the shanyrak - the main component of the yurt. The image of shanyrak on the State Emblem of the Republic is common to all peoples inhabiting the country symbol of settlement, united homeland. The strength and the strength of the shanyrak are all its uyks happiness in Kazakhstan is the welfare of every citizen it depends.',
+    'emblem_c_7' => '',
+    'emblem_c_8' => '',
+    'emblem_c_9' => '',
+    'emblem_c_10' => '',
 
 ];
 
