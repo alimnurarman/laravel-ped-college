@@ -2,35 +2,35 @@
 
 return [
     'college_name' => 'ALMATY KAZAKH HUMANITARIAN - PEDAGOGICAL COLLEGE',
-    'reception'  => 'Reception',
+    'reception' => 'Reception',
 
 
-    'HOME'       => 'HOME',
-    'NEWS'       => 'NEWS',
+    'HOME' => 'HOME',
+    'NEWS' => 'NEWS',
     'APPLICANTS' => 'APPLICANTS',
-    'gallery'    => 'GALLERY',
-    'administration'     => 'ADMINISTRATION',
-    'search'     => 'Search...',
+    'gallery' => 'GALLERY',
+    'administration' => 'ADMINISTRATION',
+    'search' => 'Search...',
 
 
-    'directors_greeting'     => 'Director\'s greeting',
+    'directors_greeting' => 'Director\'s greeting',
     'college_administration' => 'College Administration',
-    'state_symbols'          => 'State symbols',
-    'sample'                 => 'Sample',
-    'college_history'        => 'College history',
+    'state_symbols' => 'State symbols',
+    'sample' => 'Sample',
+    'college_history' => 'College history',
     'international_cooperation' => 'International cooperation',
-    'teachers'               => 'Teachers',
-    'our_achievements'       => 'Our achievements',
-    'call_schedule'          => 'Call schedule',
-    'educational_work'       => 'Educational work',
-    'state_purchases'        => 'State purchases',
-    'government_services'    => 'Government services',
-    'regulatory_legal_acts'  => 'Regulatory legal acts',
+    'teachers' => 'Teachers',
+    'our_achievements' => 'Our achievements',
+    'call_schedule' => 'Call schedule',
+    'educational_work' => 'Educational work',
+    'state_purchases' => 'State purchases',
+    'government_services' => 'Government services',
+    'regulatory_legal_acts' => 'Regulatory legal acts',
 
 
     'news_archive' => 'News archive',
 
-    'college_director_name'  => '',
+    'college_director_name' => '',
     'director_of_college' => 'Director of college',
     'deputy_of_education' => 'Deputy director of the college for educational and methodical work',
     'deputy_for_academic_affairs' => 'Deputy Director of the College for Academic Affairs',
@@ -135,9 +135,24 @@ return [
     'about_ss_flag' => 'STATE FLAG OF THE REPUBLIC OF KAZAKHSTAN',
     'about_ss_emblem' => 'State Emblem of the Republic of Kazakhstan',
     'about_ss_anthem' => 'State anthem of the Republic of Kazakhstan',
+    'anthem_c_1' => 'Hymn is one of the main symbols of the state. Greek "hymn" The word "hymn" comes from the word "solemn song". The anthem is beneficial to the citizens of the country important and important for socio-political integration and ethnocultural identification. is a sound symbol.',
+    'anthem_c_2' => 'Twice in the history of independent Kazakhstan the national anthem of the country - 1992 and It was approved in 2006.',
+    'anthem_c_3' => 'In 1992, after gaining state sovereignty, Kazakhstan competition for music and text of the anthem has been announced. Following the results of the competition the musical anthem of the Kazakh Soviet Socialist Republic It was decided to keep the edition. Thus the music of the first anthem of independent Kazakhstan The authors were Mukan Tulebayev, Eugene Brusilovsky and Latif Khamidi. In addition, to the best text Authors\' poets, well-known poets Muzafar Alimbayev, Kadyr Myrzaliev, Tumanbai Moldagaliev and Zhadyra Daribayeva.',
+    'anthem_c_4' => 'New in 2006 to increase the popularity of the sound symbol of the country The national anthem was adopted. Its basis is "My Kazakhstan", which is popular with the population. patriotic song selected. The song was written in 1956 by Shamshi Kaldayakov to Zhumeken Nazhimedenovit was. The President of Kazakhstan, Nursultan Nazarbayev, shall assign the song the highest status of a national anthem and edited the original piece of the musical work to make it more solemn. Parliament of Kazakhstan 2006 January 6, 2014 at a joint sitting of the chambers - a corresponding amendment to the Decree "On State Symbols" and introduced a new national anthem of the country.',
+    'anthem_official' => 'Anthem of the Republic of Kazakhstan (1.71 Mb, zip)',
+    'anthem_writers' => 'Words by:',
+    'anthem_w_song' => 'Wrote the song:',
 
-
-
+    'emblem_c_1' => 'The coat of arms is one of the main symbols of the state. The term emblem ("coat of arms") comes from the German word "erbe" (inheritance). & Nbsp; reflecting historical tradition symbolizes the harmonious identity of harmonious forms and objects with symbolic meaning.',
+    'emblem_c_2' => 'After the Bronze Age nomads inhabiting the territory of modern Kazakhstan The history is a testimony to the fact that the graphic concept manifested itself through a special symbol-totem, called the "symbol." sit down. For the first time, the term was used during the Turkic Khaganate.',
+    'emblem_c_3' => 'The Emblem of sovereign Kazakhstan was officially adopted in 1992. Her Its authors are well-known architects Zhandarbek Malibekov and Shot-Aman Valikhanov.',
+    'emblem_c_4' => 'The Emblem of sovereign Kazakhstan was officially adopted in 1992. Her Its authors are well-known architects Zhandarbek Malibekov and Shot-Aman Valikhanov.',
+    'emblem_c_5' => 'The central heraldic element of the state emblem is the blue color Shanyrak (the upper dome-shaped part of the yurt) in the background. Sun around the shanyrak Uyghurs, like those, spread out To the right and to the left of the shanyrak are images of mythical winged horsesplaced. In the upper part - a five-pointed star and in the lower part - "Kazakhstan" There is an inscription. The image of a star, shanyrak, uyks, mythical winged horses, as well as & nbsp; The inscription "Kazakhstan" is golden.',
+    'emblem_c_6' => 'Reminiscent of the Blue Dome and in the traditional culture of nomadic Eurasia One of the main sources of life is the shanyrak - the main component of the yurt. The image of shanyrak on the State Emblem of the Republic is common to all peoples inhabiting the country symbol of settlement, united homeland. The strength and the strength of the shanyrak are all its uyks happiness in Kazakhstan is the welfare of every citizen it depends.',
+    'emblem_c_7' => '',
+    'emblem_c_8' => '',
+    'emblem_c_9' => '',
+    'emblem_c_10' => '',
 
 ];
 

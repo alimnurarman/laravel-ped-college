@@ -2,6 +2,7 @@
 <div class="row header">
     <div class="col-sm-4">
         <div class="top-logo">
+            <img class="" src="{{URL::asset('/img/main.png')}}" alt="Ped college logo" style="width: 100px; height: auto;"/>
         </div>
         <b class="top-name-bold text-center mt-4">
             {{__('messages.college_name')}}
